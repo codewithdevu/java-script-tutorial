@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Javascript</title>
+</head>
+<body>
+    <h1>Chai aur Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+    const sayname = function () {
+        let date = new Date();
+        console.log("divyansh", date.toLocaleTimeString() );
+    };
+
+    let intervalId; // important
+
+    document.querySelector('#start').addEventListener('click', function () {
+        if (!intervalId) {
+            intervalId = setInterval(sayname, 1000);
+            console.log("Started");
+        }
+    });
+
+    document.querySelector('#stop').addEventListener('click', function () {
+        clearInterval(intervalId);
+        intervalId = null;
+        console.log("Stopped");
+    });
+</script>
+</html>
