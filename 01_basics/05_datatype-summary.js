@@ -40,5 +40,7 @@ console.log(typeof userEmail);
 console.log(typeof anotherId);
 console.log(typeof heros );
 console.log(typeof myFunction);
+console.log(typeof myObj);
+
 
 // https://262.ecma-international.org/5.1/#sec-1
